@@ -1,0 +1,20 @@
+{
+    "name": "pomo-activity-server",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "start": "node server.js",
+      "dev": "nodemon server.js"
+    },
+    "dependencies": {
+      "express": "^latest",
+      "dotenv": "^latest",
+      "node-fetch": "^latest",
+      "ws": "^latest",
+      "discord.js": "^latest"
+    },
+    "devDependencies": {
+      "nodemon": "^latest"
+    }
+  }
+  
