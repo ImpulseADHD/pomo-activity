@@ -8,3 +8,6 @@ server/node_modules/
 # Ignore build output directories
 client/dist/
 server/dist/
+
+# Ignore the License file
+LICENSE
