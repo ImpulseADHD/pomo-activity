@@ -1,0 +1,22 @@
+# Specify the main entry point for Replit to start the server
+run = "node server/server.js"
+
+# Specify the modules you need for Node.js and web
+modules = ["nodejs-20", "web"]
+
+# Nix channel (recommended version for stability)
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 3001
+externalPort = 80
+
+[[ports]]
+localPort = 4173
+externalPort = 3000
+
+[[ports]]
+localPort = 5173
+externalPort = 5173
+exposeLocalhost = true
