@@ -1,7 +1,7 @@
 // File: server/api/index.js
 
 import express from 'express';
-import { createSession, joinSession, leaveSession, getSessions } from '../services/SessionService.js';
+import { createSession, joinSession, leaveSession, getSessions } from '../services/sessionService.js';
 
 const router = express.Router();
 
