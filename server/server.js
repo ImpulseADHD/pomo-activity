@@ -1,4 +1,4 @@
-// server/server.js
+// File: server/server.js
 
 // Imports
 import express from "express";
@@ -7,12 +7,14 @@ import { WebSocketServer } from "ws";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { Client, GatewayIntentBits, REST, Routes } from "discord.js";
+import apiRoutes from './api/index.js';
+
 
 // Define __dirname in ES modules
 const __dirname = path.resolve();
 
 // Load environment variables
-dotenv.config({ path: path.resolve(__dirname, ".env") });
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 const app = express();
 
@@ -57,6 +59,9 @@ app.get("/", (req, res) => {
     }
   });
 });
+
+//API file endpoint `/api`
+app.use('/api', apiRoutes);
 
 // API Status Endpoint `/api/status`
 app.get("/api/status", (req, res) => {
